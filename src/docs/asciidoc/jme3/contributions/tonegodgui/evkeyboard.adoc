@@ -1,0 +1,21 @@
+= evkeyboard
+:author: 
+:revnumber: 
+:revdate: 2016/03/17 20:48
+:relfileprefix: ../../../
+:imagesdir: ../../..
+ifdef::env-github,env-browser[:outfilesuffix: .adoc]
+
+
+
+== KeyboardListener
+
+The KeyboardListener provides abstract methods for the following events:
+
+[source,java]
+----
+
+void onKeyPress(KeyInputEvent evt);
+void onKeyRelease(KeyInputEvent evt);
+
+----

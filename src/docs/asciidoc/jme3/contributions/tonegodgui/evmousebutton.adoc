@@ -1,0 +1,23 @@
+= evmousebutton
+:author: 
+:revnumber: 
+:revdate: 2016/03/17 20:48
+:relfileprefix: ../../../
+:imagesdir: ../../..
+ifdef::env-github,env-browser[:outfilesuffix: .adoc]
+
+
+
+== MouseButtonListener
+
+The MouseButtonListener provides abstract methods for the following events:
+
+[source,java]
+----
+
+void onMouseLeftPressed(MouseButtonEvent evt);
+void onMouseLeftReleased(MouseButtonEvent evt);
+void onMouseRightPressed(MouseButtonEvent evt);
+void onMouseRightReleased(MouseButtonEvent evt);
+
+----

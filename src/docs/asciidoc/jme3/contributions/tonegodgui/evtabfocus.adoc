@@ -1,0 +1,21 @@
+= evtabfocus
+:author: 
+:revnumber: 
+:revdate: 2016/03/17 20:48
+:relfileprefix: ../../../
+:imagesdir: ../../..
+ifdef::env-github,env-browser[:outfilesuffix: .adoc]
+
+
+
+== TabFocusListener
+
+The TabFocusListener provides abstract methods for the following events:
+
+[source,java]
+----
+
+void setTabFocus();
+void resetTabFocus();
+
+----

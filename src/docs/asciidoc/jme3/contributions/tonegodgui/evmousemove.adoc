@@ -1,0 +1,20 @@
+= evmousemove
+:author: 
+:revnumber: 
+:revdate: 2016/03/17 20:48
+:relfileprefix: ../../../
+:imagesdir: ../../..
+ifdef::env-github,env-browser[:outfilesuffix: .adoc]
+
+
+
+== MouseMovementListener
+
+The MouseMovementListener provides abstract methods for the following events:
+
+[source,java]
+----
+
+void onMouseMove(MouseMotionEvent evt);
+
+----

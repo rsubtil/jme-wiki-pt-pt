@@ -19,7 +19,7 @@ If you are not a member, you fork the repository into your GitHub account and is
 
 To fork the Wiki repository into your GitHub Account:
 
-.  Navigate to link:https://github.com/jMonkeyEngine/wiki[https://github.com/jMonkeyEngine/wiki].
+.  Navigate to link:https://github.com/ev1lbl0w/jme-wiki-pt-pt[https://github.com/ev1lbl0w/jme-wiki-pt-pt].
 .  In the menu at the top of the page, select the icon:code-fork[]*Fork* button.
 
 == Downloading the Sources
@@ -45,7 +45,7 @@ TIP: You can add more GitHub controls to the editor by adding the package `*git-
 --
 [source]
 ----
-https://github.com/jMonkeyEngine/wiki
+https://github.com/ev1lbl0w/jme-wiki-pt-pt
 ----
 The `To directory` will automatically update when you do.
 
@@ -187,7 +187,7 @@ You can help the jMonkey community by adding new snippets. Use your editor and e
 '''
 Next steps,
 
-*  Read the Wiki link:https://github.com/jMonkeyEngine/wiki[README] page.
+*  Read the Wiki link:https://github.com/ev1lbl0w/jme-wiki-pt-pt[README] page.
 *  Add link:http://asciidoctor.org/docs/user-manual/#introduction-to-asciidoctor[Introduction to Asciidoctor] to your favorites, you will refer to it often.
 *  Add the link:https://atom.io/docs[Atom Docs] to your favorites.
 *  Add the link:http://flight-manual.atom.io/[Atom Flight Manual] to your favorites.

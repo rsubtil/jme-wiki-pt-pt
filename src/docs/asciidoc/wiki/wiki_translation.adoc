@@ -104,11 +104,11 @@ WARNING: Uncheck the Display value in build log option. This is the default acti
 
 === Using Git Command Line to finish
 
-.  Clone the link:https://github.com/jMonkeyEngine/wiki[wiki] or your fork of the wiki and your new repository. Cloning and pushing takes some time due to the size of the wiki. Be patient.
+.  Clone the link:https://github.com/ev1lbl0w/jme-wiki-pt-pt[wiki] or your fork of the wiki and your new repository. Cloning and pushing takes some time due to the size of the wiki. Be patient.
 +
 [source]
 ----
-$ git clone https://github.com/jMonkeyEngine/wiki.git
+$ git clone https://github.com/ev1lbl0w/jme-wiki-pt-pt.git
 $ git clone https://github.com/user/repository.git
 $ cd repository
 $ git checkout master
@@ -140,7 +140,7 @@ git push
 
 === Using Atom Editor to finish
 
-This topic assumes you have already downloaded, installed and configured the <<wiki\atom_editor.adoc#,Atom Editor>> as well as cloned the  link:https://github.com/jMonkeyEngine/wiki[wiki] or your fork of the wiki and it's open in the Atom Editor.
+This topic assumes you have already downloaded, installed and configured the <<wiki\atom_editor.adoc#,Atom Editor>> as well as cloned the  link:https://github.com/ev1lbl0w/jme-wiki-pt-pt[wiki] or your fork of the wiki and it's open in the Atom Editor.
 
 .  In the Atom Editor, select `menu:File[New Window]` or kbd:[Ctrl] + kbd:[Shift] + kbd:[N].
 ..  Delete the new page that opens by default.
@@ -193,9 +193,9 @@ At minimum, you still have to change the attributes "`endpoint-url`", "`wiki_lin
 
 .Git CommandLine
 .  Using link:https://git-scm.com/docs/git-grep[Git Grep] or the command line editor of your choice, find and replace the following:
-..  Find the official wiki `*gh-pages*` address of `pass:[https://jmonkeyengine.github.io/wiki]`.
+..  Find the official wiki `*gh-pages*` address of `pass:[https://ev1lbl0w.github.io/jme-wiki-pt-pt/]`.
 ..  Replace it with your `*gh-pages*` address `pass:[https://username.github.io/repo-name]`.
-..  Find the official wiki `*repository*` address of `pass:[https://github.com/jMonkeyEngine/wiki]`.
+..  Find the official wiki `*repository*` address of `pass:[https://github.com/ev1lbl0w/jme-wiki-pt-pt]`.
 ..  Replace it with your `*repository*` address of `pass:[https://github.com/username/repo-name]`.
 .  Change the link:https://docs.travis-ci.com/user/status-images/[build status link] for your repository in the README.adoc page.
 +
@@ -208,9 +208,9 @@ image:https://travis-ci.org/jMonkeyEngine/wiki.svg?branch=master["Build Status",
 
 .Atom Editor
 .  Select `menu:Find[Find in Project]` or kbd:[Ctrl] + kbd:[Shift] + kbd:[F].
-..  Enter the official wiki `*gh-pages*` address of `pass:[https://jmonkeyengine.github.io/wiki]` into the search box and then select the btn:[Find All] button.
+..  Enter the official wiki `*gh-pages*` address of `pass:[https://ev1lbl0w.github.io/jme-wiki-pt-pt/]` into the search box and then select the btn:[Find All] button.
 ..  Enter your `*gh-pages*` address `pass:[https://username.github.io/repo-name]` in the "`Replace All`" box and when ready, select the btn:[Replace All] button.
-..  Enter the official wiki `*repository*` address of `pass:[https://github.com/jMonkeyEngine/wiki]` into the search box and then select the btn:[Find All] button.
+..  Enter the official wiki `*repository*` address of `pass:[https://github.com/ev1lbl0w/jme-wiki-pt-pt]` into the search box and then select the btn:[Find All] button.
 ..  Enter your `*repository*` address of `pass:[https://github.com/username/repo-name]` in the "`Replace All`" box and when ready, select the btn:[Replace All] button.
 .  Change the link:https://docs.travis-ci.com/user/status-images/[build status link] for your repository in the README.adoc page.
 +
@@ -229,6 +229,6 @@ image:https://travis-ci.org/jMonkeyEngine/wiki.svg?branch=master["Build Status",
 
 Travis should have built your copy of the wiki and moved all the .html to your "`gh-pages`" branch. If this didn't happen, then something is wrong with your setup. Examine the logs of your repository from your Travis-CI account to help you troubleshoot where you went wrong. You can expand any of the command tags by clicking on them to get a more in-depth reveal of the logged info.
 
-When you feel your repository is ready, create a thread on the link:https://hub.jmonkeyengine.org/[forum] requesting it be added to the official wiki. If approved, create a pull request of the wiki link:https://github.com/jMonkeyEngine/wiki/blob/master/src/docs/asciidoc/documentation.adoc[main page] adding your repository link under the "`Languages`" topic.
+When you feel your repository is ready, create a thread on the link:https://hub.jmonkeyengine.org/[forum] requesting it be added to the official wiki. If approved, create a pull request of the wiki link:https://github.com/ev1lbl0w/jme-wiki-pt-pt/blob/master/src/docs/asciidoc/documentation.adoc[main page] adding your repository link under the "`Languages`" topic.
 
 Thanks for your interest in removing the language barrier that may prevent other monkeys from learning more about the jMonkeyEngine.

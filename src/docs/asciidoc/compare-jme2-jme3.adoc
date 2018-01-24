@@ -1,4 +1,4 @@
-= Technical comparison between jME2 and jME3
+= Comparação técnica entre jME2 e jME3
 :author: 
 :revnumber: 
 :revdate: 2016/03/17 20:48
@@ -8,80 +8,80 @@ ifdef::env-github,env-browser[:outfilesuffix: .adoc]
 
 == Shaders?
 
-*  jME3: Shaders are integrated in the core and material system. JME3 supports shader libraries and permutations through defines. User-friendly post-processor filters, scene processors, and <<jme3/advanced/jme3_shadernodes#,shader node system>> (you don't need to know shaders to be able to use them).
-**  jME2: Full access to shader support through a RenderState, requires user to know and understand shaders. No support for libraries or permutations.
+*  jME3: Os shaders estão integrados no núcleo e no sistema de materiais. O JME3 suporta livrarias de shader e permutações. Para "user-friendly" existem _post-processing filters_, _screen processors_ e <<jme3/advanced/jme3_shadernodes#, _shader nodes system_>> (não precisa de saber programar shaders para usá-los).
+**  jME2: Acesso total a suporte de shaders através dum RenderState, obriga o utilizador a saber fazer shaders. Não tem suporte para livrarias ou permutações.
 
 
-== Resource management?
+== Gestão de recursos?
 
-*  jME3: Integrated in core. All data loaded from files is cached inside AssetManager. User customizable. Supports threaded loading. Can load from ZIP/JAR files on the local harddrive and on an HTTP server.
-*  jME2: Only textures are managed in TextureManager. ResourceLocatorTool is used for locating resources.
-
-
-== Input handling?
-
-*  jME3: Designed for games. Abstracting keyboard, mouse and joystick into a single, binding based interface. Low level interface available for +++<abbr title="Graphical User Interface">GUI</abbr>+++ access.
-*  jME2: Layer over keyboard, mouse and joystick. Main input interface (InputManager) can cause bloat in user code. Binding system available separately through darkfrog's input binding system.
+*  jME3: Integrados no núcleo. Todos os dados de ficheiros carregados são guardados em cache no AssetManager. Personalizável. Pode-se usar threads. Consegue ler ficheiros ZIP/JAR no disco local e num servidor HTTP.
+*  jME2: Só as texturas são geridas pelo TextureManager. O ResourceLocatorTool é usado para localizar recursos.
 
 
-== GL Object handling?
+== Gestão do input?
 
-*  jME3:  Unused GL objects are deleted when they are garbage collected by Java.
-*  jME2:  All objects are leaked unless manually cleaned up by the user.
-
-
-== Collision/Picking?
-
-*  jME3:  BIH (Bounding interleaved hierarchy) for static mesh picking and collision. Supports Volume vs. Tri collision.
-*  jME2:  Red-black tree over entire mesh data, less efficient collision than BIH but faster generation for animated objects. Supports Tri vs. Tri collision but not Volume vs. Tri which is more commonly used.
+*  jME3: Desenhado para jogos. Abstrai teclado, rato e joystick numa única interface baseada em _bindings_. Existem interfaces _low level_ para aceder à +++<abbr title="Graphical User Interface">GUI</abbr>+++.
+*  jME2: Uma camada sobre o teclado, rato e joystick. A interface principal de input (InputManager) pode causar atrasos no código. Um sistema de _binding_ está disponível em separado através do sistema de input com _bindings_ do darkfrog.
 
 
-== Native library handling?
+== Gestão de objetos GL?
 
-*  jME3:  Copies natives and loads them at runtime.
-*  jME2:  None, requires user to specify java.library.path property.
-
-
-== Post processing?
-
-*  jME3:  HDR/Tonemapping, SSAO, Bloom, Radial Blur, Light Scattering, CartoonEdge.
-*  jME2:  Bloom, Basic Motion Blur
+*  jME3:  Todos os objetos GL em desuso são apagados quando são _garbage collected_ pelo Java.
+*  jME2:  Todos os objetos dão _leak_ a não ser que sejam limpos manualmente.
 
 
-== Shadow effects?
+== Colisão/Picking?
 
-*  jME3:  Built in the core. Customizable shadow map method, supports basic and PSSM methods.
-*  jME2:  ShadowedRenderPass for stencil shadows, issues if camera goes inside shadow volume. DirectionalShadowMapPass for basic shadow mapping.
-
-
-== Geometry handling?
-
-*  jME3:  Geometry is a scene graph element, contains a Mesh object. Meshes contain VertexBuffers which specify # of components, type, float/int buffer. This allows a single mesh to be shared along many scene graph elements. Supports features like Level of Detail and animation internally.
-*  jME2:  Geometry/TriMesh a scene graph element contains float buffers and int buffers, VBO only supports static models, custom attributes are specified manually via GLSLShaderDataLogic and do not work if VBO is used.
+*  jME3:  _BIH (Bounding interleaved hierarchy)_ para colisão e picking de formas estáticas. Suporta colisões _Volume vs. Tri_.
+*  jME2:  Árvore vermelha-preta sobre toda a _mesh data_, menos eficiente que o sistema BIH mas é mais rápido de criar para objetos animados. Suportas colisões _Tri vs. Tri_ mas não suporta do tipo _Volume vs. Tri_ que são os mais frequentes.
 
 
-== Scene graph updates?
+== Gestão de livrarias nativas?
 
-*  jME3:  Refresh flags prevent unneeded scene updates.
-*  jME2:  All data updated in updateGeometricState. Every call updates entire scene graph, locking mechanism is used to reduce unneeded updates but requires used intervention.
+*  jME3:  Copia as livrarias nativas e carrega-as no _runtime_.
+*  jME2:  Não há, o utilizador tem de especificar a propriedade _java.library.path_.
+
+
+== Efeitos? (_Post processing_)
+
+*  jME3:  _HDR/Tonemapping, SSAO, Bloom_(Brilho), _Radial Blur, Light Scattering_(Raios de Luz), _CartoonEdge_(Arestas Cartoon).
+*  jME2:  _Bloom_(Brilho), Efeito de Desfoque Básico
+
+
+== Sombras?
+
+*  jME3:  Integradas no núcleo. Método de _shadow map_ personalizável, suporta métodos básicos e de PSSM.
+*  jME2:  ShadowedRenderPass para sombras _stencil_, há problemas se a câmara entrar no volume da sombra. DirectionalShadowMapPass para _shadow mapping_ básico.
+
+
+== Gestão de Geometrys?
+
+*  jME3:  O Geometry é um elemento do _scene graph_ , contém um objeto _Mesh_(Forma). As _Meshes_ contém _VertexBuffers_ que especificam o # de componentes, tipp, _float/int buffer_. Isto permite que apenas uma forma seja partilhada com muitos elementos no _scene graph_. Suporta internamente functions como _Level of Detail_(Nível de Detalhe) e animação.
+*  jME2:  O Geometry/TriMesh é um elemento do _scene graph_ que contém _float buffers_ e _int buffer_s, _VBO_ só suposta modelos estáticos, atributos personalizados são especificados manualmente via _GLSLShaderDataLogic_ e não funcionam se um _VBO_ for usado.
+
+
+== Updates no _scene graph_?
+
+*  jME3:  _Flags_ de atualizações previnem updates desnecessárias à cena.
+*  jME2:  Todos os dados são atualizados no _updateGeometricState_. Cada _call_ atualiza o _scene graph_ todo, um mecanismo de bloquei é usado para reduzir updates desnecessárias mas requer intervenção do utilizador.
 
 
 == RenderState/Material
 
-*  jME3:  Only at leafs. Scriptable material system is used. materials contain techniques which contain shader &amp; render state. Shader is customized with defines specified in material instance (by user). This is a data-driven approach to materials.
-*  jME2:  Each scene graph element contains an array of RenderStates. They are combined and stored in the leafs. No data-driven solution.
+*  jME3:  Só em _leafs_. Um sistema de materiais _scriptable_ é usado. Materiais contém técnicas que contém _shaders_ &amp; _render states_. Um shader é personalizado com _defines_ na instância do material (pelo utilizador). Esta é uma abordagem _data-driven_ a materiais.
+*  jME2:  Cada elementos do _scene graph_ contém um array de _RenderStates_. São combinados e guardados em _leafs_. Não há soluções _data-driven_.
 
 
-== Support for fixed-function/old gpus?
+== Suporte para _fixed-function_/GPUs antigas?
 
-*  jME3:  Supported via FixedFunc bindings in shader source.
-*  jME2:  Full support.
+*  jME3:  Existe suporte via _bindings FixedFunc_ no _source_ do shader.
+*  jME2:  Suporte total.
 
 
-== Renderer capabilities?
+== Capacidades de _renderer_?
 
-*  jME3:  Queriable through cap system.
-*  jME2:  Queriable through the Renderer and the various renderstates.
+*  jME3:  Empilhável através do _cap system_.
+*  jME2:  Empilhável através do _Renderer_ e dos vários _renderstates_.
 
 
 == Math object pooling (Vector, Matrix, etc)?

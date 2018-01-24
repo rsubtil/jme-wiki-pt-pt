@@ -1,4 +1,4 @@
-= "Which should I choose? jME2 or jME3?"
+= "Qual devo escolher? jME2 ou jME3?"
 :author: 
 :revnumber: 
 :revdate: 2016/03/17 20:48

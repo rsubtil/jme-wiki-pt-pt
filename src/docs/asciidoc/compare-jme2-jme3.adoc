@@ -84,67 +84,67 @@ ifdef::env-github,env-browser[:outfilesuffix: .adoc]
 *  jME2:  Empilhável através do _Renderer_ e dos vários _renderstates_.
 
 
-== Math object pooling (Vector, Matrix, etc)?
+== _Pooling_ de objetos matemáticos (Vetor, Matrix, etc)?
 
-*  jME3:  ThreadLocal-based system, defined as instance variables accessible by any class. Assertion-based “locking is used to prevent data corruption.
-*  jME2:  static declarations (kills multithreading in these classes) or no pooling at all.
-
-
-== Text?
-
-*  jME3:  AngelCode bitmap text
-*  jME2:  Fixed-length font, 3D text, AngelCode bitmap text
+*  jME3:  Sistema baseado em _ThreadLocal_, definico como variáveis de instância e disponíveis a qualquer classe. Bloqueio basiado em _asserts_ previne corrupção de dados.
+*  jME2:  Declarações estáticas (destrói _multithreading_ nestas classes) ou não há _pooling_ sequer.
 
 
-== User interface?
+== Texto?
 
-*  jME3:  Simple text and ortho built-in, NiftyGui integration can be used for more advanced user interface.
-*  jME2:  Only simple text and ortho. jME-desktop (not working well under MacOS X), external libs available (FengGUI, GBUI, NiftyGui).
-
-
-== Animation?
-
-*  jME3:  OgreXML-based animation system with many features. Software skinning and hardware skinning are supported.
-*  jME2:  Too many systems, creating a big mess. jME-xml and collada use one system, md2/md3 use another, milkshape models use another, ogrexml uses another and md5 uses another.
+*  jME3:  Texto bitmap AngelCode
+*  jME2:  Fontes de tamanho fixo, texto 3D, texto bitmap AngelCode
 
 
-== Spatial partitioning?
+== Interface de utilizador?
 
-*  jME3:  None.
-*  jME2:  None.
-
-
-== Model formats?
-
-*  jME3:  Ogre3D Mesh.XML and OBJ.
-*  jME2:  Static/VertexAnim: ase, obj, 3ds, md2, md3, ms3d, x3d. Skeleton: (broken) collada, ogre3d, jme-xml (md5 as a seperate lib)
+*  jME3:  Texto simples e _ortho_ integrados, integração com o NiftyGui pode ser usado para interfaces mais avançadas.
+*  jME2:  Apenas texto simple e _ortho_. jME-desktop (não funciona bem no MacOS X), estão disponíveis livrarias externas (FengGUI, GBUI, NiftyGui).
 
 
-== Import/Export?
+== Animação?
 
-*  jME3:  Same as jME2. Don't fix what's not broken.
-*  jME2:  Input/Output capsules and Savable. Binary and XML.
-
-
-== Physics?
-
-*  jME3:  Full JBullet integration.
-*  jME2:  External libs available: jME-physics, jbullet-jme, SimplePhysics.
+*  jME3:  Sistema de animação baseado no OgreXML com muitas funcionalidades. _Software skinning_ e _hardware skinning_ são suportados.
+*  jME2:  Há demasiados sistemas, que criam uma confusão. O jME-xml e collada usam um sistema, md2/md3 usam outro, modelos milkshape usam outro, ogrexml usa outro e md5 usa outro.
 
 
-== Canvas support?
+== Particionamento de Spatials?
 
-*  jME3:  Yes.
-*  jME2:  Yes, although the +++<abbr title="Application Programming Interface">API</abbr>+++ could have been a little less convoluted.
-
-
-== Particles?
-
-*  jME3:  Yes.
-*  jME2:  Yes but +++<abbr title="Application Programming Interface">API</abbr>+++ could be a little less convoluted.
+*  jME3:  Nenhum.
+*  jME2:  Nenhum.
 
 
-== Terrain?
+== Formatos de modelos?
 
-*  jME3:  Image based heightmap, supports dynamic terrain loading, geomipmapping (LOD), and texture splatting. Can import Ogre3D dotScene files for non-heightmap terrain.
-*  jME2:  Image based or randomly generated heightmap. Quadtree support.
+*  jME3:  Ogre3D Mesh.XML e OBJ.
+*  jME2:  Static/VertexAnim: ase, obj, 3ds, md2, md3, ms3d, x3d. Skeleton: (não funciona) collada, ogre3d, jme-xml (md5 com livraria externa)
+
+
+== Importar/Exportar?
+
+*  jME3:  O mesmo que o jME2. Não reparem o que não está estragado.
+*  jME2:  Cápsulas Input/Output e Savable. Binário e XML.
+
+
+== Física?
+
+*  jME3:  Integração completa do JBullet.
+*  jME2:  Estão disponíveis livrarias externas: jME-physics, jbullet-jme, SimplePhysics.
+
+
+== Suporte para _Canvas_?
+
+*  jME3:  Sim.
+*  jME2:  Sim, embora a +++<abbr title="Application Programming Interface">API</abbr>+++ pudesse estar menos confusa.
+
+
+== Partículas?
+
+*  jME3:  Sim.
+*  jME2:  Sim, mas a +++<abbr title="Application Programming Interface">API</abbr>+++ podia estar menos confusa.
+
+
+== Terreno?
+
+*  jME3:  Baseado em imagens _heightmap_, suporta carregamento dinâmico de terreno, geomipmapping (LOD), e aplicação de texturas (_texture splatting_). Podem-se importar ficheiros _dotScene_ do Ogre3D para terreno não-_heightmap_.
+*  jME2:  Baseado em imagens ou em _heightmaps_ criados aleatoriamente. Suporte a Quadtree.

@@ -1,4 +1,4 @@
-= jMonkeyEngine3 Requirements
+= Requisitos do jMonkeyEngine3
 :author:
 :revnumber:
 :revdate: 2016/03/17 20:48
@@ -7,68 +7,69 @@
 ifdef::env-github,env-browser[:outfilesuffix: .adoc]
 
 
-This page shows software and hardware requirements from two points of view:
+Esta página mostra os requisitos de software e hardware de duas perspetivas diferentes:
 
-*  For the Java developers who create games; and
-*  For the users (your customers) who play the games that you created.
+*  Para os desenvolvedores Java que criam jogos; e
+*  Para os utilizadores (os seus clientes) que jogam os seus jogos.
 
 
-== For Developers
+== Para Desenvolvedores
 
-These are the minimum requirements for developers who create games using the jMonkeyEngine SDK:
+Estes são os requisitos mínimos para desenvolvedores que cria jogos usando o jMonkeyEngine SDK:
 [cols="30,70", options="header"]
 |===
 
-a|Operating system
+a|Sistema Operativo
 a|Mac +++<abbr title="Operating System">OS</abbr>+++ X, Windows, Linux, Solaris
 
-a|Memory (JVM heap size)
-a| &gt; 40 +++<abbr title="Megabyte">MB</abbr>+++ ++ memory for assets
+a|Memória (tamanho do heap do JVM)
+a| &gt; 40 +++<abbr title="Megabyte">MB</abbr>+++ ++ memória para os assets
 
 a|CPU
 a|&gt; 1 +++<abbr title="Gigahertz">GHz</abbr>+++
 
-a|Graphic card
-a|AMD/ATI Radeon 9500, NVIDIA GeForce 5 FX, Intel GMA 4500, or better +
-supporting OpenGL 2.0 or better (native libraries are included in download)
+a|Placa gráfica
+a|AMD/ATI Radeon 9500, NVIDIA GeForce 5 FX, Intel GMA 4500, ou superior +
+suporte a OpenGL 2.0 ou superior (as livrarias nativas estão incluídas com o download)
 
 a|Java Development Kit
-a|JDK 7 or higher +
-Your development team gets the Java Development Kit for free from link:http://www.java.com[http://www.java.com]; for Mac +++<abbr title="Operating System">OS</abbr>+++, see link:http://support.apple.com/kb/DL1421[apple.com]. +
-At least intermediate Java experience is required.
+a|JDK 7 ou maior +
+A sua equipa de desenvolvimento obtém o Java Development Kit gratuitamente daqui: link:http://www.java.com[http://www.java.com]; para Mac +++<abbr title="Operating System">OS</abbr>+++, ver link:http://support.apple.com/kb/DL1421[apple.com]. +
+Um nível intermédio de experiência com Java é necessário
 
 |===
 
-We recommend using the <<sdk#,jMonkeyEngine SDK>> as game development environment (IDE). However, any third-party Java IDE (and even a text editor and the commandline) will work fine together with the jME framework if you are experienced with the tool of your choice. For requirements of other IDEs, please see the third party's documentation.
+Recomendamos o uso do <<sdk#,jMonkeyEngine SDK>> como a ferramenta de desenvolvimento do jogo (IDE). No entanto, qualquer outro IDE Java (e até um editor de texto e um terminal) pode ser usado e funciona bem com a framework jME, caso já tenha experiência em usar essa ferramenta. Para os requisitos de outros IDEs, consulte a documentação de terceiros.
 
 
-== For Users
+== Para Utilizadores
 
-These are the minimum requirements for your customers, users who play the games that were created using the jMonkeyEngine3 framework:
+Estes são os requisitos mínimos para os seus clientes, os utilizadores que jogam jogos criados com o jMonkeyEngine3:
 [cols="30,70", options="header"]
 |===
 
-a|Operating system
+a|Sistema Operativo
 a|Mac +++<abbr title="Operating System">OS</abbr>+++ X, Windows, Linux, Solaris
 
-a|Memory (JVM heap size)
-a| &gt; 10 +++<abbr title="Megabyte">MB</abbr>+++ ++ memory for assets (models, textures, sounds, etc, of a particular game)
+a|Memória (tamanho do heap do JVM)
+a| &gt; 10 +++<abbr title="Megabyte">MB</abbr>+++ ++ memória paraos assets (modelos, texturas, sons, etc, dum jogo em particular)
 
 a|CPU
 a|&gt; 1 +++<abbr title="Gigahertz">GHz</abbr>+++
 
-a|Graphic card
-a|AMD/ATI Radeon 9500, NVIDIA GeForce 5 FX, Intel GMA 4500, or better +
-supporting OpenGL 2.0 or better (native libraries are included in download)
+a|Placa gráfica
+a|AMD/ATI Radeon 9500, NVIDIA GeForce 5 FX, Intel GMA 4500, ou superior +
+suporte a OpenGL 2.0 ou superior (as livrarias nativas estão incluídas com o download)
 
-a|link:https://hub.jmonkeyengine.org/t/does-my-phone-meet-the-requirements-necessary-to-run-jmonkeyengine-3/17231[Android Devices]
-a|(For mobile games only) Android 2.2 +++<abbr title="Operating System">OS</abbr>+++, graphics card supporting OpenGL 2
+a|link:https://hub.jmonkeyengine.org/t/does-my-phone-meet-the-requirements-necessary-to-run-jmonkeyengine-3/17231[Dispositivos Android]
+a|(Apenas para jogos móveis) Android 2.2 +++<abbr title="Operating System">OS</abbr>+++, placa gráfica que suporte OpenGL 2
 
 a|Java Runtime
-a|Java 5 or higher +
-The Java Virtual Machine (JVM) is required to run jME games. +
-The JVM is often preinstalled, if not, your users get it for free from link:http://www.java.com[http://www.java.com]; for Mac +++<abbr title="Operating System">OS</abbr>+++, see link:http://support.apple.com/kb/DL1421[apple.com].
+a|Java 5 ou maior +
+O Java Virtual Machine (JVM) é necessário para correr jogos jME. +
+Geralmente o JVM já vem pré-instalado, caso não tenham, os seus utilizadores podem obtê-lo aqui: link:http://www.java.com[http://www.java.com]; para Mac +++<abbr title="Operating System">OS</abbr>+++, ver link:http://support.apple.com/kb/DL1421[apple.com].
 
 |===
 
+Certifique-se de que informa os seus utilizadores quanto aos requisitos.
 Make sure to inform your users about these requirements.

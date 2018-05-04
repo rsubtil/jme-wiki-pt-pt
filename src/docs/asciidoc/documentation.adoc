@@ -11,7 +11,7 @@ Esta wiki de documentação contém guias de instalação e configuração, tuto
 
 Também é muito bem-vindo a reparar quaisquer erros tanto de informação como de escrita, assim como parágrafos vagos, usando o menu "`Wiki`" no topo ou os botões de "`Edit`" ao pé de cada parágrafo. Tem de ter sessão iniciada para poder editar esta wiki.
 
-TIP: Isto é um Balão. Irá encontrar muitos destes espalhados pela Wiki, Veja as <<wiki/admonitions#,Significados dos Balões>> para saber o significado deste e de todos os outros Balões.
+TIP: Isto é um Balão. Irá encontrar muitos destes espalhados pela Wiki, Veja os <<wiki/admonitions#,Significados dos Balões>> para saber o significado deste e de todos os outros Balões.
 
 == Instalar
 
